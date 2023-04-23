@@ -12,7 +12,7 @@ Data obtained from the School of Business Admissions Office)
 
 st.sidebar.header('User Input Features')
 
-students_data = pd.read_csv('https://github.com/yarahaddad03/capstone/blob/master/preprocesseddata.csv')
+students_data = pd.read_csv('preprocesseddata.csv')
 
 def user_input_features():
     Age = st.sidebar.slider('Age at admission', 16, 50, 18)
