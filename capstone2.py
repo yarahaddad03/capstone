@@ -20,9 +20,9 @@ def user_input_features():
     Country = st.sidebar.selectbox('Country', ('0', '1'))
     Scholarship = st.sidebar.selectbox('Scholarship', ('0', '1'))
     sat = st.sidebar.slider('SAT', 0, 1530, 1100)
-    Governorates = st.sidebar.slider('Governorates', 0, 7, 1)
-    School = st.sidebar.slider('School', 0, 100, 50)
-    Hours = st.sidebar.slider('hours_diff', 0, 100, 50)
+    Governorates = st.sidebar.slider('Governorates', -1, 7, 1)
+    School = st.sidebar.slider('School', -1, 6, 2)
+    Hours = st.sidebar.slider('hours_diff', 0, 15, 2)
     
     data = {'Age at admission': Age,
             'Gender': Gender,
@@ -66,7 +66,7 @@ prediction_proba= model.predict_proba(df)
 st.subheader('Prediction')
 st.text('Fail: 0, Pass: 1')
 st.write(students_data['Performance'][prediction])
-#st.write(prediction)
+st.write(prediction)
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
