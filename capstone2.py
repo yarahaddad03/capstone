@@ -66,7 +66,7 @@ prediction_proba= model.predict_proba(df)
 st.subheader('Prediction')
 st.text('Fail: 0, Pass: 1')
 st.write(students_data['Performance'][prediction])
-#st.write(prediction)
+st.write(prediction)
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
