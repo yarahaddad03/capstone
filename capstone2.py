@@ -22,7 +22,6 @@ def user_input_features():
     sat = st.sidebar.slider('SAT', 0, 1530, 1100)
     Governorates = st.sidebar.slider('Governorates', 0, 7, 1)
     School = st.sidebar.slider('School', 0, 100, 50)
-    Hours = st.sidebar.slider('hours_diff', 0, 100, 50)
     
     data = {'Age at admission': Age,
             'Gender': Gender,
@@ -30,8 +29,7 @@ def user_input_features():
             'Scholarship' : Scholarship,
             'SAT' : sat,
             'Governorates' : Governorates,
-            'School' : School,
-            'hours_diff' : Hours}
+            'School' : School}
     features = pd.DataFrame(data, index=[0])
     return features
 
