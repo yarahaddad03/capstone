@@ -7,7 +7,7 @@ st.write("""
 
 This app predicts undergraduate students pass/fail
 
-Data obtained from the School of Business Admissions Office)
+Data obtained from the School of Business Admissions Office
 """)
 
 st.sidebar.header('User Input Features')
@@ -16,7 +16,7 @@ students_data = pd.read_csv('preprocesseddata.csv')
 
 def user_input_features():
     Age = st.sidebar.slider('Age at admission', 16, 50, 18)
-    Gender = st.sidebar.selectbox('Gender', ('0', '1'))
+    Gender = st.sidebar.selectbox('Gender', ('M', 'F'))
     Country = st.sidebar.selectbox('Country', ('0', '1'))
     Scholarship = st.sidebar.selectbox('Scholarship', ('0', '1'))
     sat = st.sidebar.slider('SAT', 0, 1530, 1100)
